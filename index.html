@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+	<title>Calculator</title>
+</head>
+<body>
+    <form>
+        <label for="num1">Unesite broj:</label>
+        <input type="number" id="num1" value="1" required>
+        <label for="visina">Operacija:</label>
+    <div class="oper">
+        <button type="button" onClick="add()">+</button>
+        <button type="button" onClick="sub()">-</button>
+        <button type="button" onClick="mul()">&times</button>
+        <button type="button" onClick="div()">/</button>
+    </div>
+        <label for="num2">Unesite broj:</label>
+        <input type="number" id="num2" value="1" required>
+        <input type="text" value="" id="result" disabled value="" placeholder="Rezultat">
+    </form>
+
+    <script type="text/javascript">
+
+            function add() { 
+                var a = document.getElementById("num1").value; 
+                var b = document.getElementById("num2").value;
+                document.getElementById("result").value = +a + +b;
+        }
+            function sub() { 
+                var a = document.getElementById("num1").value; 
+                var b = document.getElementById("num2").value;
+                document.getElementById("result").value = a - b;
+        }
+            function mul() { 
+                var a = document.getElementById("num1").value; 
+                var b = document.getElementById("num2").value;
+                document.getElementById("result").value = a * b;
+        }
+            function div() { 
+                var a = document.getElementById("num1").value; 
+                var b = document.getElementById("num2").value;
+                document.getElementById("result").value = a / b;
+        }
+
+
+    </script>
+
+</body>
+</html>
